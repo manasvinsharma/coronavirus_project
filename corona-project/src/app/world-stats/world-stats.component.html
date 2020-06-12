@@ -1,0 +1,160 @@
+<div id="mySidenav" class="sidenav">
+    <a class="closebtn" (click)="closeNav()">&times;</a>
+    <a routerLink="#">World</a>
+    <a routerLink="#">Continent</a>
+    <a routerLink="#">Country</a>
+    <a routerLink="#">India</a>
+</div>
+<div id="main">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" routerLink="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-40">
+                <li class="nav-item active mx-20">
+                    <a class="nav-link" routerLink="#">Corona Tracker <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active mx-20">
+                    <a class="nav-link" routerLink="#">Corona News <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active mx-20">
+                    <a class="nav-link" routerLink="#">Corona Stats <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-danger my-2 mx-2 my-sm-0" type="submit">Sign In</button>
+                <button class="btn btn-outline-danger my-2 mx-2 my-sm-0" type="submit">Login</button>
+            </form>
+        </div>
+    </nav>
+    <br><br>
+    <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+
+    <!-- carousel starts -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner container">
+            <div class="carousel-item active">
+                <img src="../../assets/world_stats_images/1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/world_stats_images/2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/world_stats_images/3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/world_stats_images/4.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <!-- stats section starts -->
+    <section class="text-gray-700 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac
+                    Heirloom</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon
+                    brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't
+                    heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac
+                    humblebrag.</p>
+            </div>
+            <div class="flex flex-wrap -m-4 text-center">
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <h1 class="fas fa-hospital-user"></h1>
+                        <h2 class="title-font font-medium text-3xl text-gray-900" id="confirmed"></h2>
+                        <p class="leading-relaxed">Confirmed</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <h1 class="fas fa-skull-crossbones"></h1>
+                        <h2 class="title-font font-medium text-3xl text-gray-900" id="deaths"></h2>
+                        <p class="leading-relaxed">Deaths</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <h1 class="fas fa-heart"></h1>
+                        <h2 class="title-font font-medium text-3xl text-gray-900" id="recovered"></h2>
+                        <p class="leading-relaxed">Recovered</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <h1 class="fas fa-globe"></h1>
+                        <h2 class="title-font font-medium text-3xl text-gray-900" id="world-percent"></h2>
+                        <p class="leading-relaxed">World % affected</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap -m-4 text-center">
+                <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <h1 class="fas fa-procedures"></h1>
+                        <h2 class="title-font font-medium text-3xl text-gray-900" id="critical"></h2>
+                        <p class="leading-relaxed">Critical Condition</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <h1 class="fas fa-child"></h1>
+                        <h2 class="title-font font-medium text-3xl text-gray-900" id="mild"></h2>
+                        <p class="leading-relaxed">Mild condition</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                        <h1 class="fas fa-chart-line"></h1>
+                        <h2 class="title-font font-medium text-3xl text-gray-900" id="death-rate"></h2>
+                        <p class="leading-relaxed">Death Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- charts start -->
+    <div class="container">
+        <canvas id="barChart"></canvas>
+    </div>
+    <div class="container my-10">
+        <canvas id="timeline"></canvas>
+    </div>
+</div>
