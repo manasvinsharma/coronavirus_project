@@ -1,156 +1,133 @@
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-    <a href="#">World</a>
-    <a href="#">Continent</a>
-    <a href="#">Country</a>
-    <a href="#">India</a>
-</div>
-
 <div id="main">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#" style="text-decoration: none;">Navbar</a>
-
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-40" style="margin-bottom: -15px;">
-                <li class="nav-item active mx-20">
-                    <a class="nav-link" href="#" style="text-decoration: none;">Corona Tracker <span
-                            class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active mx-20">
-                    <a class="nav-link" href="#" style="text-decoration: none;">Corona News <span
-                            class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active mx-20">
-                    <a class="nav-link" href="#" style="text-decoration: none;">Corona Stats <span
-                            class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-danger my-2 mx-2 my-sm-0" type="submit">Sign In</button>
-                <button class="btn btn-outline-danger my-2 mx-2 my-sm-0" type="submit">Login</button>
-            </form>
-        </div>
-    </nav>
-    <br><br>
-    <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
-
+    
     <!-- Extra -->
     <div id="extra">
-        <div class="container">
+        <div>
             <div class="row no-collapse-1 ">
-                <section class="4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/NorthAmerica.svg" alt=""></a>
-                    <div class="box flex flex-wrap -m-4 text-center">
+                <section class="a4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/NorthAmerica.svg" alt=""></a>
+                    <div class="box flex flex-wrap -m-2 text-center">
                         <h1 class="display-3 continent-name"></h1>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
-                                <p class="leading-relaxed">Confirmed</p>
+                        <div class="myflex">
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
+                                    <p class="leading-relaxed">Confirmed</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
-                                <p class="leading-relaxed">Death</p>
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
+                                    <p class="leading-relaxed">Death</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/SouthAmerica.png" alt=""></a>
-                    <div class="box flex flex-wrap -m-4 text-center">
+                <section class="a4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/SouthAmerica.png" alt=""></a>
+                    <div class="box flex flex-wrap -m-2 text-center">
                         <h1 class="display-3 continent-name"></h1>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
-                                <p class="leading-relaxed">Confirmed</p>
+                        <div class="myflex">
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
+                                    <p class="leading-relaxed">Confirmed</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
-                                <p class="leading-relaxed">Death</p>
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
+                                    <p class="leading-relaxed">Death</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/Europe.svg" alt=""></a>
-                    <div class="box flex flex-wrap -m-4 text-center">
+                <section class="a4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/Europe.svg" alt=""></a>
+                    <div class="box flex flex-wrap -m-2 text-center" style="margin-top: 80px;">
                         <h1 class="display-3 mx-10 continent-name"></h1>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
-                                <p class="leading-relaxed">Confirmed</p>
+                        <div class="myflex">
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
+                                    <p class="leading-relaxed">Confirmed</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
-                                <p class="leading-relaxed">Death</p>
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
+                                    <p class="leading-relaxed">Death</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
             <div class="row no-collapse-1">
-                <section class="4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/asia.png" alt=""></a>
-                    <div class="box flex flex-wrap -m-4 text-center">
+                <section class="a4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/asia.png" alt=""></a>
+                    <div class="box flex flex-wrap -m-4 text-center"  style="margin-top: 80px;">
                         <h1 class="display-3 mx-10 continent-name"></h1>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
-                                <p class="leading-relaxed">Confirmed</p>
+                        <div class="myflex">
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
+                                    <p class="leading-relaxed">Confirmed</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
-                                <p class="leading-relaxed">Death</p>
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
+                                    <p class="leading-relaxed">Death</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/Africa.png" alt=""></a>
-                    <div class="box flex flex-wrap -m-4 text-center">
+                <section class="a4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/Africa.png" alt=""></a>
+                    <div class="box flex flex-wrap -m-4 text-center"  style="margin-top: 80px;">
                         <h1 class="display-3 mx-10 continent-name"></h1>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
-                                <p class="leading-relaxed">Confirmed</p>
+                        <div class="myflex">
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
+                                    <p class="leading-relaxed">Confirmed</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
-                                <p class="leading-relaxed">Death</p>
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
+                                    <p class="leading-relaxed">Death</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/Australia.png" alt=""></a>
+                <section class="a4u"> <a href="#" class="image featured"><img src="../../assets/continent-stats/Australia.png" alt=""></a>
                     <div class="box flex flex-wrap -m-4 text-center">
                         <h1 class="display-3 continent-name"></h1>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
-                                <p class="leading-relaxed">Confirmed</p>
+                        <div class="myflex">
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 confirmed"></h2>
+                                    <p class="leading-relaxed">Confirmed</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
-                            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                                <h1 class="fas fa-hospital-user"></h1>
-                                <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
-                                <p class="leading-relaxed">Death</p>
+                            <div class="p-4 md:w-1/2 sm:w-1/1 w-full">
+                                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                    <h1 class="fas fa-hospital-user"></h1>
+                                    <h2 class="title-font font-medium text-3xl text-gray-900 Death"></h2>
+                                    <p class="leading-relaxed">Death</p>
+                                </div>
                             </div>
                         </div>
                     </div>

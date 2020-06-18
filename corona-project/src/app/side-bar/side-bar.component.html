@@ -1,0 +1,11 @@
+<div id="mySidenav" class="sidenav">
+    <a class="closebtn" (click)="closeNav()">&times;</a>
+    <a routerLink="worldStats">World</a>
+    <a routerLink="continentStats">Continent</a>
+    <a routerLink="#">Country</a>
+    <a routerLink="#">India</a>
+</div>
+<br><br>
+<a style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</a>
+
+<router-outlet></router-outlet>
