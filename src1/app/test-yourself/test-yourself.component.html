@@ -1,0 +1,46 @@
+<body>
+    <div>
+        <h1>Please give correct answers...</h1>
+        <p>Accurate answers help us - help you better. Medical and support staff are valuable and very limited. Be a responsible citizen.</p>
+        ---------------------------------------------------------------------------------------------------------
+        <br>
+        <p>Please note that information from these questions will be used for monitoring & management of the current health crisis and research in the fight against COVID-19.</p>
+        
+        <div class="questions">
+            <h2>Are you experiencing any of the following symptoms?</h2>
+            <div>
+                <input type="checkbox" name="symptom[]" value="1" />Cough<br>
+                <input type="checkbox" name="symptom[]" value="1"/>Fever<br>
+                <input type="checkbox" name="symptom[]" value="1"/>Difficulty in Breathing <br>
+                <input type="checkbox" name="symptom[]" value="1"/>loss of senses of smell and taste<br>
+                <input type="checkbox" name="symptom[]" value="1"/>None of the Above
+            </div>
+
+            <h2>Have you ever had any of the following:</h2>
+            <div>
+                <input type="checkbox" name="desease[]" value="1"/>Diabetes <br>
+                <input type="checkbox" name="desease[]" value="1"/>Hypertension<br>
+                <input type="checkbox" name="desease[]" value="1"/>Lung disease<br>
+                <input type="checkbox" name="desease[]" value="1"/>Heart disease<br>
+                <input type="checkbox" name="desease[]" value="1"/>Kidney Disorder<br>
+                <input type="checkbox" name="desease[]" value="1"/>None of the Above
+            </div>
+            <h2>Have you traveled anywhere internationally in the last 28-45 days?</h2>
+            <div>
+                <input type="checkbox">Yes<br>
+                <input type="checkbox">No
+            </div>
+            <h2>Which of the following apply to you?</h2>
+            <div>
+                <input type="checkbox">I have recently interacted or lived with someone who has tested positive for COVID-19<br>
+                <input type="checkbox">I am a healthcare worker and I examined a COVID-19 confirmed case without protective gear<br>
+                <input type="checkbox">None of the Above
+            </div>
+        </div>
+        
+        <br> <br>
+        <button type="submit" (click)="test()">Test</button>
+
+    </div>
+</body>
+ 
