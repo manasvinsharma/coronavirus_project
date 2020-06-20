@@ -1,6 +1,6 @@
-import { SignupComponent } from './../../src from c/app/signup/signup.component';
-import { LoginComponent } from './../../src from c/app/login/login.component';
-import { TestYourselfComponent } from './../../src from k/app/test-yourself/test-yourself.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { TestYourselfComponent } from './test-yourself/test-yourself.component';
 import { CountryStatsComponent } from './country-stats/country-stats.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { CoronaTrackerComponent } from './corona-tracker/corona-tracker.component';
