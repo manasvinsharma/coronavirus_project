@@ -19,5 +19,9 @@ export class DataService {
   getDataFromApi3():any{
     return this.http.get("https://corona.lmao.ninja/v2/continents?yesterday&sort");
   }
+
+  getDataFromApi4():any{
+    return this.http.get("https://api.covid19api.com/summary");
+  }
   
 }

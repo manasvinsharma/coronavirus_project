@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-corona-tracker',
@@ -8,29 +7,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CoronaTrackerComponent implements OnInit {
 
-  name;
-  email;
-
-  constructor(private route: ActivatedRoute, private router:Router) { }
-  
+  constructor() { }
 
   ngOnInit(): void {
-this.email=localStorage.getItem('email');
-this.route.queryParamMap.subscribe((d)=>{
-this.name=d.get('name');
-})
-
-
-
-}
-
-logout(){
-  localStorage.removeItem("email");
-  this.router.navigate(['/']);
-
-
-}
-
   }
 
-
+}

@@ -10,23 +10,20 @@ export class LoginComponent implements OnInit {
 
   emailProp;
   passwordProp;
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  login()
-  {
-        // alert(this.emailProp);
-        // alert(this.passwordProp);
-        if(this.emailProp=="gchirag631@gmail.com" && this.passwordProp=="chirag")
-        {
-              localStorage.setItem("email", this.emailProp);
-              this.router.navigate(['/coronaTracker'], {queryParams:{name:"Chirag"}})
-        }
-        else{
-          alert("Credentials not correct")
-        }
+  login() {
+    // alert(this.emailProp);
+    // alert(this.passwordProp);
+    if (this.emailProp == "chirag@gmail.com" && this.passwordProp == "chirag") {
+      localStorage.setItem("email", this.emailProp);
+      this.router.navigate(['/coronaTracker'], { queryParams: { name: "Chirag" } })
+    }
+    else {
+      alert("Credentials not correct")
+    }
   }
-
 }

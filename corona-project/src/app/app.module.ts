@@ -9,9 +9,11 @@ import { ContinentStatsComponent } from './continent-stats/continent-stats.compo
 import { CoronaNewsComponent } from './corona-news/corona-news.component';
 import { CoronaTrackerComponent } from './corona-tracker/corona-tracker.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
-import { LoginComponent } from './login/login.component';       
-import { FormsModule } from '@angular/forms';
-import { SignupComponent } from './signup/signup.component'          
+import { CountryStatsComponent } from './country-stats/country-stats.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { TestYourselfComponent } from './test-yourself/test-yourself.component';   
+import { FormsModule } from '@angular/forms';               
 
 @NgModule({
   declarations: [
@@ -21,8 +23,10 @@ import { SignupComponent } from './signup/signup.component'
     CoronaNewsComponent,
     CoronaTrackerComponent,
     SideBarComponent,
+    CountryStatsComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    TestYourselfComponent
   ],
   imports: [
     BrowserModule,

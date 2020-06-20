@@ -1,3 +1,7 @@
+import { SignupComponent } from './../../src from c/app/signup/signup.component';
+import { LoginComponent } from './../../src from c/app/login/login.component';
+import { TestYourselfComponent } from './../../src from k/app/test-yourself/test-yourself.component';
+import { CountryStatsComponent } from './country-stats/country-stats.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { CoronaTrackerComponent } from './corona-tracker/corona-tracker.component';
 import { CoronaNewsComponent } from './corona-news/corona-news.component';
@@ -5,30 +9,23 @@ import { ContinentStatsComponent } from './continent-stats/continent-stats.compo
 import { WorldStatsComponent } from './world-stats/world-stats.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
-  { path: 'coronaNews', component: CoronaNewsComponent },
-  { path: 'coronaTracker', component: CoronaTrackerComponent },
-  {
-    path: 'sidebar',
-    component: SideBarComponent,
-    children: [{ path: 'worldStats', component: WorldStatsComponent },
-    { path: 'continentStats', component: ContinentStatsComponent }
-
-
-    ]
-  
-
-
+  {path:'coronaNews',component:CoronaNewsComponent},
+  {path:'coronaTracker',component:CoronaTrackerComponent},
+  { path:'sidebar',
+    component:SideBarComponent,
+    children:[  {path:'worldStats',component:WorldStatsComponent},
+                {path:'continentStats',component:ContinentStatsComponent},
+                {path:'countryStats',component:CountryStatsComponent},
+             ]
   },
-
-  {path: 'login', component:LoginComponent} ,      
-  {path: 'signup',component:SignupComponent}                                                  
-  // {path:'sidebar/worldStats',component:WorldStatsComponent},
+  
   // {path:'sidebar/continentStats',component:ContinentStatsComponent},
+  {path:'testYourself',component:TestYourselfComponent},
+  {path:'login', component:LoginComponent} ,      
+  {path:'signup',component:SignupComponent}        
 ];
 
 @NgModule({
