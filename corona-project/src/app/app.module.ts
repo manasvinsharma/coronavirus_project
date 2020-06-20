@@ -8,7 +8,10 @@ import {HttpClientModule} from '@angular/common/http';  // i added this to inclu
 import { ContinentStatsComponent } from './continent-stats/continent-stats.component';
 import { CoronaNewsComponent } from './corona-news/corona-news.component';
 import { CoronaTrackerComponent } from './corona-tracker/corona-tracker.component';
-import { SideBarComponent } from './side-bar/side-bar.component';                  
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { LoginComponent } from './login/login.component';       
+import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component'          
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     ContinentStatsComponent,
     CoronaNewsComponent,
     CoronaTrackerComponent,
-    SideBarComponent
+    SideBarComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

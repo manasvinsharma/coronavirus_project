@@ -5,17 +5,28 @@ import { ContinentStatsComponent } from './continent-stats/continent-stats.compo
 import { WorldStatsComponent } from './world-stats/world-stats.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
-  {path:'coronaNews',component:CoronaNewsComponent},
-  {path:'coronaTracker',component:CoronaTrackerComponent},
-  { path:'sidebar',
-    component:SideBarComponent,
-    children:[  {path:'worldStats',component:WorldStatsComponent},
-                {path:'continentStats',component:ContinentStatsComponent}
-             ]
+  { path: 'coronaNews', component: CoronaNewsComponent },
+  { path: 'coronaTracker', component: CoronaTrackerComponent },
+  {
+    path: 'sidebar',
+    component: SideBarComponent,
+    children: [{ path: 'worldStats', component: WorldStatsComponent },
+    { path: 'continentStats', component: ContinentStatsComponent }
+
+
+    ]
+  
+
+
   },
+
+  {path: 'login', component:LoginComponent} ,      
+  {path: 'signup',component:SignupComponent}                                                  
   // {path:'sidebar/worldStats',component:WorldStatsComponent},
   // {path:'sidebar/continentStats',component:ContinentStatsComponent},
 ];

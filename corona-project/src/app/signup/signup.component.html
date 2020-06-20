@@ -1,0 +1,30 @@
+
+<br>
+<br>
+<br>
+<br>
+
+
+<form #f="ngForm">
+    <div class="form-group"  >
+      <label for="name">Name:</label>
+      <input #nameref="ngModel"  [(ngModel)]="nameProp" name="name"   type="text" class="form-control" placeholder="Enter email" id="email">
+    </div>
+
+    <div class="form-group"  >
+        <label for="email">Email address:</label>
+        <input #emailref="ngModel"  [(ngModel)]="emailProp" name="email"   type="email" class="form-control" placeholder="Enter email" id="email">
+      </div>
+
+      <div class="form-group"  >
+        <label for="mobileno">Email address:</label>
+        <input #mobileref="ngModel"  [(ngModel)]="mobileProp" name="mobile"   type="text" class="form-control" placeholder="Enter email" id="email">
+      </div>
+
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input #passref="ngModel"  [(ngModel)]="passwordProp" name="password"  type="password" class="form-control" placeholder="Enter password" id="pwd">
+    </div>
+    
+    <button type="submit" class="btn btn-primary"  (click)="signup()"  >Submit</button>
+  </form>
