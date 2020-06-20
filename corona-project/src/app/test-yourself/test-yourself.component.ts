@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestYourselfComponent implements OnInit {
 
+  symptomnoa;
+  traveledchk;
   constructor() { }
 
   ngOnInit(): void {
@@ -15,4 +17,5 @@ export class TestYourselfComponent implements OnInit {
   {
     alert("Hope you have filled details correctly..!")
   }
+
 }
