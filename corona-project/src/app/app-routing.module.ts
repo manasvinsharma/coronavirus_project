@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { CoronaHealthComponent } from './corona-health/corona-health.component';
 import { CoronaProtectionComponent } from './corona-protection/corona-protection.component';
 import { SignupComponent } from './signup/signup.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},        
   {path:'coronaProtection',component:CoronaProtectionComponent},        
   {path:'coronaHealth',component:CoronaHealthComponent},        
+  {path:'home',component:HomeComponent},        
 ];
 
 @NgModule({

@@ -16,7 +16,8 @@ import { TestYourselfComponent } from './test-yourself/test-yourself.component';
 import { FormsModule } from '@angular/forms';
 import { IndiaComponent } from './india/india.component';
 import { CoronaHealthComponent } from './corona-health/corona-health.component';
-import { CoronaProtectionComponent } from './corona-protection/corona-protection.component';               
+import { CoronaProtectionComponent } from './corona-protection/corona-protection.component';
+import { HomeComponent } from './home/home.component';               
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CoronaProtectionComponent } from './corona-protection/corona-protection
     TestYourselfComponent,
     IndiaComponent,
     CoronaHealthComponent,
-    CoronaProtectionComponent
+    CoronaProtectionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
