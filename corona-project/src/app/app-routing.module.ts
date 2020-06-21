@@ -1,6 +1,6 @@
-import { SignupComponent } from './../../src from c/app/signup/signup.component';
-import { LoginComponent } from './../../src from c/app/login/login.component';
-import { TestYourselfComponent } from './../../src from k/app/test-yourself/test-yourself.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { TestYourselfComponent } from './test-yourself/test-yourself.component';
 import { CountryStatsComponent } from './country-stats/country-stats.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { CoronaTrackerComponent } from './corona-tracker/corona-tracker.component';
@@ -9,13 +9,14 @@ import { ContinentStatsComponent } from './continent-stats/continent-stats.compo
 import { WorldStatsComponent } from './world-stats/world-stats.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
-  {path:'coronaNews',component:CoronaNewsComponent},
-  {path:'coronaTracker',component:CoronaTrackerComponent},
+  {path:'coronaNews',component:CoronaNewsComponent, canActivate:[AuthGuard]},
+  {path:'coronaTracker',component:CoronaTrackerComponent, canActivate:[AuthGuard]},
   { path:'sidebar',
-    component:SideBarComponent,
+    component:SideBarComponent, canActivate:[AuthGuard],
     children:[  {path:'worldStats',component:WorldStatsComponent},
                 {path:'continentStats',component:ContinentStatsComponent},
                 {path:'countryStats',component:CountryStatsComponent},
@@ -24,7 +25,7 @@ const routes: Routes = [
   
   // {path:'sidebar/continentStats',component:ContinentStatsComponent},
   {path:'testYourself',component:TestYourselfComponent},
-  {path:'login', component:LoginComponent} ,      
+  {path: 'login', component:LoginComponent},
   {path:'signup',component:SignupComponent}        
 ];
 
