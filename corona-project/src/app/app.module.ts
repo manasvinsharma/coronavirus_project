@@ -13,7 +13,8 @@ import { CountryStatsComponent } from './country-stats/country-stats.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TestYourselfComponent } from './test-yourself/test-yourself.component';   
-import { FormsModule } from '@angular/forms';               
+import { FormsModule } from '@angular/forms';
+import { IndiaComponent } from './india/india.component';               
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     CountryStatsComponent,
     LoginComponent,
     SignupComponent,
-    TestYourselfComponent
+    TestYourselfComponent,
+    IndiaComponent
   ],
   imports: [
     BrowserModule,
