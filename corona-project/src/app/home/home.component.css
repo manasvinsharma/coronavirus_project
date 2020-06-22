@@ -1,0 +1,33 @@
+
+        .display-1 {
+            text-align: center;
+            font-weight: 800;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: solid;
+        }
+
+        .display-4{
+            font-weight: 500;
+            text-decoration: solid;
+        }
+
+        .flexed{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .steps{
+            padding: 30px;
+        }
+
+        .left{
+            text-align: center;
+            /* padding: 15px; */
+            margin: 30px;
+        }
+
+        .right{
+            text-align: center;
+            /* padding: 15px; */
+            margin: 30px;
+        }
