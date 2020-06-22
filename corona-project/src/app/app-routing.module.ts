@@ -1,3 +1,10 @@
+
+
+
+import { HomeComponent } from './home/home.component';
+
+import { CoronaHealthComponent } from './corona-health/corona-health.component';
+import { CoronaProtectionComponent } from './corona-protection/corona-protection.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { TestYourselfComponent } from './test-yourself/test-yourself.component';
@@ -9,13 +16,14 @@ import { ContinentStatsComponent } from './continent-stats/continent-stats.compo
 import { WorldStatsComponent } from './world-stats/world-stats.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
-  {path:'coronaNews',component:CoronaNewsComponent},
-  {path:'coronaTracker',component:CoronaTrackerComponent},
+  {path:'coronaNews',component:CoronaNewsComponent, canActivate:[AuthGuard]},
+  {path:'coronaTracker',component:CoronaTrackerComponent, canActivate:[AuthGuard]},
   { path:'sidebar',
-    component:SideBarComponent,
+    component:SideBarComponent, canActivate:[AuthGuard],
     children:[  {path:'worldStats',component:WorldStatsComponent},
                 {path:'continentStats',component:ContinentStatsComponent},
                 {path:'countryStats',component:CountryStatsComponent},
@@ -23,9 +31,22 @@ const routes: Routes = [
   },
   
   // {path:'sidebar/continentStats',component:ContinentStatsComponent},
-  {path:'testYourself',component:TestYourselfComponent},
+  {path:'testYourself',component:TestYourselfComponent, canActivate:[AuthGuard]},
+
+  {path: 'login', component:LoginComponent},
+  {path:'signup',component:SignupComponent},      
+
   {path:'login', component:LoginComponent} ,      
-  {path:'signup',component:SignupComponent}        
+  {path:'signup',component:SignupComponent},        
+
+  {path:'coronaProtection',component:CoronaProtectionComponent, canActivate:[AuthGuard]},        
+  {path:'coronaHealth',component:CoronaHealthComponent, canActivate:[AuthGuard]},        
+
+
+  {path:'coronaProtection',component:CoronaProtectionComponent},        
+  {path:'coronaHealth',component:CoronaHealthComponent},        
+  {path:'home',component:HomeComponent},        
+
 ];
 
 @NgModule({

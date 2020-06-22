@@ -24,12 +24,7 @@ this.name=d.get('name');
 
 }
 
-logout(){
-  localStorage.removeItem("email");
-  this.router.navigate(['/']);
 
-
-}
 
   }
 

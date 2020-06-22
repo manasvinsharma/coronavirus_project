@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-login',
@@ -10,20 +11,35 @@ export class LoginComponent implements OnInit {
 
   emailProp;
   passwordProp;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private ds: DataService) { }
 
   ngOnInit(): void {
+
+    if(localStorage.getItem('email')){
+      this.router.navigate(['/']);
+    }
+
   }
 
-  login() {
-    // alert(this.emailProp);
-    // alert(this.passwordProp);
-    if (this.emailProp == "chirag@gmail.com" && this.passwordProp == "chirag") {
-      localStorage.setItem("email", this.emailProp);
-      this.router.navigate(['/coronaTracker'], { queryParams: { name: "Chirag" } })
-    }
-    else {
-      alert("Credentials not correct")
-    }
+  login()
+   {
+    this.ds.signin({
+      email:this.emailProp,
+      password:this.passwordProp,
+      })
+      .subscribe((response)=>{
+        if(response.status=="ok")
+        {
+           localStorage.setItem('name', response.data[0].name);
+           localStorage.setItem('email', response.data[0].email);
+
+           this.router.navigate(['/coronaTracker']);
+
+        }
+        else{
+          alert("Incorrect E-mail or Password");
+        }
+      })   
+ 
   }
 }

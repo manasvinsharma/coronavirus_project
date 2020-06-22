@@ -23,5 +23,14 @@ export class DataService {
   getDataFromApi4():any{
     return this.http.get("https://api.covid19api.com/summary");
   }
+
+ signup(d):any{
+    return this.http.post('http://localhost:3000/sign-up', d);
+ }
+
+ signin(d):any{
+  return this.http.post('http://localhost:3000/sign-in', d);
+ }
+
   
 }

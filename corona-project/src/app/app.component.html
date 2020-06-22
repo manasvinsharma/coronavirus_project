@@ -1,6 +1,6 @@
 <div id="main">
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="/home">HOME</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,16 +11,29 @@
         <li class="nav-item active mx-20">
           <a class="nav-link" routerLink="/coronaTracker" routerLinkActive="whenActive">Corona Tracker <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active mx-20">
-          <a class="nav-link" routerLink="/coronaNews" routerLinkActive="whenActive">Corona News <span class="sr-only">(current)</span></a>
-        </li>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLinkActive="whenActive" style="color: white;">
+            About
+          </a>
+        
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" routerLink="/coronaProtection">Corona Protection</a>
+            <a class="dropdown-item" routerLink="/coronaHealth">Corona Health</a>
+          </div>
+        </div>
+
         <li class="nav-item active mx-20">
           <a class="nav-link" routerLink="/sidebar" routerLinkActive="whenActive">Corona Stats <span class="sr-only">(current)</span></a>
         </li>
+
+        <li class="nav-item active mx-20">
+          <a class="nav-link" routerLink="/testYourself" routerLinkActive="whenActive">Test Yourself<span class="sr-only">(current)</span></a>
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <button routerLink='/signup' class="btn btn-outline-danger my-2 mx-2 my-sm-0" >Sign In</button>
+        <button routerLink='/signup' class="btn btn-outline-danger my-2 mx-2 my-sm-0" >Sign Up</button>
         <button routerLink='/login' class="btn btn-outline-danger my-2 mx-2 my-sm-0" >Login</button>
+        <button (click)="logout()" class="btn btn-outline-danger my-2 mx-2 my-sm-0" type="submit">LogOut</button>
       </form>
     </div>
   </nav>
@@ -28,6 +41,3 @@
 
 
 <router-outlet></router-outlet> 
-
-
-<!-- <app-test-yourself></app-test-yourself> -->

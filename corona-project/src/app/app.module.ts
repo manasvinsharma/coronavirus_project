@@ -13,7 +13,11 @@ import { CountryStatsComponent } from './country-stats/country-stats.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { TestYourselfComponent } from './test-yourself/test-yourself.component';   
-import { FormsModule } from '@angular/forms';               
+import { FormsModule } from '@angular/forms';
+import { IndiaComponent } from './india/india.component';
+import { CoronaHealthComponent } from './corona-health/corona-health.component';
+import { CoronaProtectionComponent } from './corona-protection/corona-protection.component';
+import { HomeComponent } from './home/home.component';               
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { FormsModule } from '@angular/forms';
     CountryStatsComponent,
     LoginComponent,
     SignupComponent,
-    TestYourselfComponent
+    TestYourselfComponent,
+    IndiaComponent,
+    CoronaHealthComponent,
+    CoronaProtectionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class TestYourselfComponent implements OnInit {
 
   symptomnoa;
+  deseasenoa;
   traveledchk;
+  applychk;
+  applychk2;
   constructor() { }
 
   ngOnInit(): void {
