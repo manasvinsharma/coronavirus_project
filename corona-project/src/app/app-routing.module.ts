@@ -1,3 +1,6 @@
+
+import { CoronaHealthComponent } from './corona-health/corona-health.component';
+import { CoronaProtectionComponent } from './corona-protection/corona-protection.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { TestYourselfComponent } from './test-yourself/test-yourself.component';
@@ -24,9 +27,16 @@ const routes: Routes = [
   },
   
   // {path:'sidebar/continentStats',component:ContinentStatsComponent},
-  {path:'testYourself',component:TestYourselfComponent},
+  {path:'testYourself',component:TestYourselfComponent, canActivate:[AuthGuard]},
+
   {path: 'login', component:LoginComponent},
-  {path:'signup',component:SignupComponent}        
+  {path:'signup',component:SignupComponent},      
+
+  {path:'login', component:LoginComponent} ,      
+  {path:'signup',component:SignupComponent},        
+  {path:'coronaProtection',component:CoronaProtectionComponent, canActivate:[AuthGuard]},        
+  {path:'coronaHealth',component:CoronaHealthComponent, canActivate:[AuthGuard]},        
+
 ];
 
 @NgModule({

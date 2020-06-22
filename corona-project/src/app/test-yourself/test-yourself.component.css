@@ -1,9 +1,8 @@
 body{
-    padding-left: 20%;
+    padding-left: 25%;
 }
 div{
     width: 700px;
-     
     text-align: center;
     height: 100%;
     background-color: cornflowerblue;
@@ -11,7 +10,7 @@ div{
 /* div h1{
     
 } */
-.questions h2{
+.questions h3{
     background-color: crimson;
     
 }
@@ -20,4 +19,12 @@ div{
     padding-left: 150px;
     width: auto;
      
+}
+button{
+    border-radius: 20px;
+    background-color: black;
+    color: blanchedalmond;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
 }
