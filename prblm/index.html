@@ -27,7 +27,7 @@
     fetchData();
 
     function fetchData() {
-      var my_data = {};
+      var my_data = new Object();
       url = "https://api.covid19india.org/data.json";
       fetch(url).then((response) => {
         //console.log("inside first then");
@@ -41,27 +41,39 @@
 
         for (let i = 1; i <= array.length; i++) {
 
-          obj4 = {
-              array[i]["statecode"]: {
-                                      tooltip: {
-                                                  text: array[i]["confirmed"],
-                                                  backgroundColor: '#ff5722'
-                                               },
-                                      backgroundColor: '#ff5722',
-                                      label: {
-                                                visible: true
-                                             }
-                                    }
-                  },
+          // console.log(array[i]);
+          // obj4 = new Object();
+          var tooltip = { text : array[i].confirmed};
+          var lable = {
+                         visible:true
+                      }
+              // obj4[array[i].statecode] = { tooltip:tooltip, lable:lable, backgroundColor:"#ff5722"};
+
+            my_data[array[i].statecode] = { tooltip:tooltip, lable:lable, backgroundColor:"#ff5722"};
+          
+
+          // obj4 = {
+          //     array[i]["statecode"]: {
+          //                             tooltip: {
+          //                                         text: array[i]["confirmed"],
+          //                                         backgroundColor: '#ff5722'
+          //                                      },
+          //                             backgroundColor: '#ff5722',
+          //                             label: {
+          //                                       visible: true
+          //                                    }
+          //                           }
+          //         },
         }
 
-         
+        console.log("line 74");
+      console.log(my_data.MH);
+      showMap(my_data);
         
-        my_data = obj4;
-      console.log(my_data);
-      // console.log(JSON.stringify(obj4));
-    })
-    showMap(my_data);
+        // console.log(JSON.stringify(obj4));
+      })
+
+     
     }
 
     function showMap(my_data) {
@@ -138,85 +150,3 @@
 </body>
 
 </html>
-
-
-
-
-
-<!--{ 
-//  KA: {
-//                   tooltip: {
-//                     text: 'Karnataka has 2,851 monthly users total',
-//                     backgroundColor: '#ff5722'
-//                   },
-//                   backgroundColor: '#ff5722',
-//                   label: {
-//                     visible: true
-//                   }
-//                 },
-//                 MH: {
-//                   tooltip: {
-//                     text: 'Maharashtra has 2,683 monthly users total',
-//                     backgroundColor: '#ff9800'
-//                   },
-//                   backgroundColor: '#ff9800',
-//                   label: {
-//                     visible: true
-//                   }
-//                 },
-//                 TL: {
-//                   tooltip: {
-//                     text: 'Telangana has 1,494 monthly users total',
-//                     backgroundColor: '#00AE4D'
-//                   },
-//                   backgroundColor: '#00AE4D',
-//                   label: {
-//                     visible: true
-//                   }
-//                 },
-//                 TN: {
-//                   tooltip: {
-//                     text: 'Tamil Nadu has 1,968 monthly users total',
-//                     backgroundColor: '#00bcd4'
-//                   },
-//                   backgroundColor: '#00bcd4',
-//                   label: {
-//                     visible: true
-//                   }
-//                 } 
-}-->
-
-
-
-
-<!-- for (let i = 1; i <= array.length; i++) {
-
-  obj4 =  {
-            array[i]["statecode"]: {
-                                    tooltip:{
-                                              text: array[i]["confirmed"],
-                                              backgroundColor: '#ff5722'
-                                            },
-                                    backgroundColor: '#ff5722',
-                                    label:{
-                                              visible: true
-                                          }
-                                  }
-          },
-} -->
-
-
-
-
-
-<!-- 
- obj1["text"] = Number(array[i]["confirmed"]);
- obj1["backgroundColor"] = '#ff5722';
-
- obj2["visible"] = true;
-
- obj3["tooltip"] = obj1;
- obj3["backgroundColor"] = '#ff9800';
- obj3["label"] = obj2;
-
- obj4[array[i]["statecode"]] = obj3; -->
