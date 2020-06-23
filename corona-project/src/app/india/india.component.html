@@ -1,0 +1,38 @@
+
+ 
+  
+
+  <div id="myChart" class="chart--container">
+    <a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a>
+
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <h1 class="display-4">OVERALL</h1>
+      <div class="card-body">
+        <h4 class="card-text">TOTAL CONFIRMED <span class="badge badge-secondary"></span></h4><br>
+        <h4 class="card-text">TOTAL DEATHS <br><span class="badge badge-secondary"></span></h4><br>
+        <h4 class="card-text">TOTAL RECOVERED <span class="badge badge-secondary"></span></h4><br>
+        <h4 class="card-text">ACTIVE CASES <br><span class="badge badge-secondary"></span></h4><br>
+      </div>
+    </div>
+    <div class="flag">
+      <img src="../../assets/india/flag.svg" alt="">
+      <h1 class="heading">INDIA</h1>
+    </div>
+  </div>
+
+
+  <div class="search">
+    <div>
+        <h1 class="display-4">Search Indian State To Get Detailed Info</h1>
+    </div>
+    <div>
+        <form class="form-inline my-2 my-lg-0">
+            <input #state_searched class="form-control mr-sm-2" type="search" placeholder="Search a State" aria-label="Search">
+            <button type="button" class="btn btn-secondary" (click)="searchAlgo(state_searched.value)">Search</button>
+        </form>
+    </div>
+
+    <div class="details">
+      
+    </div>
+</div>

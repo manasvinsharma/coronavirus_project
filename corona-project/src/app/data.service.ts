@@ -24,12 +24,20 @@ export class DataService {
     return this.http.get("https://api.covid19api.com/summary");
   }
 
+  getDataFromApi5():any{
+    return this.http.get("https://api.covid19india.org/data.json");
+  }
+
  signup(d):any{
     return this.http.post('http://localhost:3000/sign-up', d);
  }
 
  signin(d):any{
   return this.http.post('http://localhost:3000/sign-in', d);
+ }
+
+ storeLocation(d):any{
+  return this.http.post('http://localhost:3000/corona-tracker', d);
  }
 
   
