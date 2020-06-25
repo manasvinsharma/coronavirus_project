@@ -45,7 +45,7 @@ export class IndiaComponent implements OnInit {
       var lable = {
         visible: true
       }
-      my_data[this.array[i].statecode] = { tooltip: tooltip, lable: lable, backgroundColor: "#ff5722" };
+      my_data[this.array[i].statecode] = { tooltip: tooltip, lable: lable,backgroundColor: '#' + Math.floor(Math.random() * 16777215).toString(16)};
     }
 
     badges[0].innerHTML = `${this.array[0].confirmed}`;

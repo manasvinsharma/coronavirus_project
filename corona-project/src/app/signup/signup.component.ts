@@ -23,7 +23,6 @@ passwordProp;
      this.ds.signup({
        name:this.nameProp, 
        email:this.emailProp,
-      
        mobile:this.mobileProp,
        password:this.passwordProp,
       })
@@ -38,8 +37,5 @@ passwordProp;
          }
        })
   }
-
-
-  
 }
 

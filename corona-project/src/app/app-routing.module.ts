@@ -37,8 +37,8 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path:'signup',component:SignupComponent},      
 
-  {path:'login', component:LoginComponent} ,      
-  {path:'signup',component:SignupComponent},        
+  // {path:'login', component:LoginComponent} ,      
+  // {path:'signup',component:SignupComponent},        
 
   {path:'coronaProtection',component:CoronaProtectionComponent, canActivate:[AuthGuard]},        
   {path:'coronaHealth',component:CoronaHealthComponent, canActivate:[AuthGuard]},        

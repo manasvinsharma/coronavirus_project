@@ -1,9 +1,37 @@
 <br><br><br>
-<h1>corona-tracker works</h1>
+
+<button type="button" class="btn btn-dark" (click)="getLocation()">My Location</button>
 
 
-{{name}} <br>
-{{email}}
-<br><br><br>
+<agm-map [latitude]='latitude' [longitude]='longitude' [zoom]='4'  [zoomControl]='zoomCtrl' > 
+  
+    <agm-marker     [latitude]='latitude'
+    [longitude]='longitude'  >
+   
+    <agm-info-window >
+       <h6>Longitude: {{longitude}}</h6>
+       <h6>Latitude: {{latitude}}</h6>
+       <h6>Email: {{email}}</h6>
+      
+     </agm-info-window>
+   
+   
+   </agm-marker>
 
-<button id="get_location" (click)="getLocation()">get location</button>   
+ <ng-container *ngFor="let u of userlist">
+
+
+
+    <agm-marker    [latitude]='u.lattitude'
+     [longitude]='u.longitude'>
+    
+     <agm-info-window #window>
+        <h6>Longitude: {{u.longitude}}</h6>
+        <h6>Latitude: {{u.lattitude}}</h6>
+        <h6>email: {{u.email}}</h6>
+      </agm-info-window>
+    
+    
+    </agm-marker>
+  </ng-container>
+</agm-map>
