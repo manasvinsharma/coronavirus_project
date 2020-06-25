@@ -59,12 +59,12 @@ export class CoronaTrackerComponent implements OnInit {
   getLocation() {
     if (navigator.geolocation) {
       console.log("success");
-      this.obj = navigator.geolocation.getCurrentPosition(this.showposition);
-
-      setTimeout((obj2)=>{ alert("Hello");
-                            console.log(obj2);
-                            this.saveLocation(obj2); 
-                          }, 2000,this.obj);                    
+       navigator.geolocation.getCurrentPosition((p)=>{this.showposition(p)});
+      
+      // setTimeout((obj2)=>{ alert("Hello");
+      //                       console.log(obj2);
+      //                       this.saveLocation(obj2); 
+      //                     }, 2000,this.obj);                    
       
       // setTimeout(this.myFunction, 2000,this.obj,this.saveLocation);  //from stackoverflow                  
     }
@@ -84,7 +84,7 @@ export class CoronaTrackerComponent implements OnInit {
     var long = position.coords.longitude;
     console.log("inside showposition");
     console.log(lati, long);
-    return {lattitude:lati,longitude:long};
+    this.saveLocation( {lattitude:lati,longitude:long});
   }
 
   saveLocation(obj1)
