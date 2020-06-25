@@ -40,5 +40,9 @@ export class DataService {
   return this.http.post('http://localhost:3000/corona-tracker', d);
  }
 
+ getLocations():any{
+  return this.http.post('http://localhost:3000/get-locations',"");
+ }
+
   
 }

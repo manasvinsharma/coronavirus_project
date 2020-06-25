@@ -35,17 +35,11 @@ const routes: Routes = [
   {path:'testYourself',component:TestYourselfComponent, canActivate:[AuthGuard]},
 
   {path: 'login', component:LoginComponent},
-  {path:'signup',component:SignupComponent},      
-
-  // {path:'login', component:LoginComponent} ,      
-  // {path:'signup',component:SignupComponent},        
+  {path:'signup',component:SignupComponent},             
 
   {path:'coronaProtection',component:CoronaProtectionComponent, canActivate:[AuthGuard]},        
   {path:'coronaHealth',component:CoronaHealthComponent, canActivate:[AuthGuard]},        
-
-
-  // {path:'coronaProtection',component:CoronaProtectionComponent},        
-  // {path:'coronaHealth',component:CoronaHealthComponent},        
+       
   {path:'home',component:HomeComponent},        
 
 ];

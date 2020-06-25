@@ -34,8 +34,8 @@ passwordProp;
          }
          else{
            alert("E-mail already Registered");
+          //  alert(JSON.stringify(response.data));
          }
        })
   }
 }
-
