@@ -66,7 +66,7 @@ app.post('/sign-in', bodyParser.json(), (req, res) => {
 
 app.post('/sign-up', bodyParser.json(), (req, res) => {
 
-        var collection = connection.db(dbName).collection('user_1');
+        var collection = connection.db(dbName).collection('users');
 
         collection.find({ email: req.body.email }).toArray((err, docs) => {
         if (!err && docs.length > 0) {
