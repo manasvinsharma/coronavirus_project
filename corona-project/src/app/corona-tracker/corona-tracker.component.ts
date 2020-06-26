@@ -72,11 +72,13 @@ export class CoronaTrackerComponent implements OnInit {
           alert("error in saving location");
         }
       })
-      
   }
+
+  
   checking(){
     this.getAllLocations();
   }
+
 
 
   distanceCheck(lat1, lon1, lat2, lon2, unit) {

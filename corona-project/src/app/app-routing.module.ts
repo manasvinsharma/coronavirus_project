@@ -21,6 +21,8 @@ import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
+
+  {path:'',component:HomeComponent},
   {path:'coronaNews',component:CoronaNewsComponent, canActivate:[AuthGuard]},
   {path:'coronaTracker',component:CoronaTrackerComponent, canActivate:[AuthGuard]},
   { path:'sidebar',

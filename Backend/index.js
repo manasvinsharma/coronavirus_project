@@ -91,22 +91,6 @@ app.post('/sign-up', bodyParser.json(), (req, res) => {
 
 
 
-// app.post('/corona-tracker', bodyParser.json(), (req, res) => {
-
-//     var collection = connection.db(dbName).collection('user_2');
-
-//     collection.insert(req.body, (err, result) => {
-//         if (!err) {
-//             res.send({ status: "ok", data: "location saved" });
-//         }
-//         else {
-//             res.send({ status: "failed", data: err });
-//         }
-//     })
-// })
-
-
-
 app.post('/corona-tracker', bodyParser.json(), (req, res) => {
 
     var collection = connection.db(dbName).collection('user_2');

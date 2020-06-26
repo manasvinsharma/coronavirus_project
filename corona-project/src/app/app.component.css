@@ -7,3 +7,20 @@
 nav{
     background-image: url("../assets/img.gif");
 }
+
+footer{
+    background-image: url("../assets/img.gif");
+    height: 350px;
+}
+
+.inside-footer{
+    color: white;
+}
+
+.bg-gray-200{
+    background-image: url("../assets/img.gif");
+}
+
+.w-64{
+    width: 8rem;
+}

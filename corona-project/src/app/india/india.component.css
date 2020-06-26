@@ -47,6 +47,8 @@
     .search {
       margin-top: 80px;
       margin-left: 150px;
+      display: flex;
+      justify-content: space-evenly;
     }
 
       .list-group {
@@ -55,7 +57,7 @@
       }
 
       .details{
-        border: 1px solid grey;
+        /* border: 1px solid grey; */
         border-radius: 10px;
         box-shadow: 5px 6px grey;
         width: 500px;

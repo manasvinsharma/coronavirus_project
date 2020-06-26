@@ -5,11 +5,11 @@
 }
 
 .carousel-control-next {
-    right: 150px;
+    right: 200px;
 }
 
 .carousel-control-prev {
-    left: 150px;
+    left: 200px;
 }
 
 @media screen and (max-height: 450px) {

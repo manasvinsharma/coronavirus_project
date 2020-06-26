@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
+import {Output} from '@angular/core';
+import {EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -9,16 +11,19 @@ import { DataService } from '../data.service';
 })
 export class LoginComponent implements OnInit {
 
+  @Output()  childEvent = new EventEmitter();
+
   emailProp;
   passwordProp;
+  loginCLicked:boolean;
+  
   constructor(private router: Router, private ds: DataService) { }
 
   ngOnInit(): void {
 
     if(localStorage.getItem('email')){
       this.router.navigate(['/']);
-    }
-
+    }  
   }
 
   login()
@@ -32,12 +37,14 @@ export class LoginComponent implements OnInit {
         {
            localStorage.setItem('name', response.data[0].name);
            localStorage.setItem('email', response.data[0].email);
-
+          //  this.childEvent.emit(false);
            this.router.navigate(['/testYourself']);
 
         }
         else{
           alert("Incorrect E-mail or Password");
+          // if(!localStorage.getItem("name") && !localStorage.getItem("email"))
+          // this.childEvent.emit(true);
         }
       })   
  
