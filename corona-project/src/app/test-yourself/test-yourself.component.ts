@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Router } from '@angular/router';
+ 
 @Component({
   selector: 'app-test-yourself',
   templateUrl: './test-yourself.component.html',
@@ -9,14 +10,12 @@ import { Router } from '@angular/router';
 export class TestYourselfComponent implements OnInit {
   symptom;
   desease;
+  symptomnoa;
+  deseasenoa;
   traveledchk;
   applychk;
   applychk2;
-  symptomnoa;
-  deseasenoa;
-  
-
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() : void{
 
@@ -24,9 +23,8 @@ export class TestYourselfComponent implements OnInit {
 
   test()
   {
-   
-    alert("Hope you have filled details correctly..!")
-    
+    alert("Hope you have filled details correctly..!");
+    alert("Now navigating to corona tracker........if u re positive then only your location will be saved in our db otherwise it will be temporarily saved");  
+    this.router.navigate(['/coronaTracker']);
   }
-
 }

@@ -24,6 +24,10 @@ export class DataService {
     return this.http.get("https://api.covid19api.com/summary");
   }
 
+  getDataFromApi5():any{
+    return this.http.get("https://api.covid19india.org/data.json");
+  }
+
  signup(d):any{
     return this.http.post('http://localhost:3000/sign-up', d);
  }
@@ -32,9 +36,13 @@ export class DataService {
   return this.http.post('http://localhost:3000/sign-in', d);
  }
 
- coronatest(d):any{
-  return this.http.post('http://localhost:3000/corona-test', d);
-
+ storeLocation(d):any{
+  return this.http.post('http://localhost:3000/corona-tracker', d);
  }
+
+ getLocations():any{
+  return this.http.post('http://localhost:3000/get-locations',"");
+ }
+
   
 }

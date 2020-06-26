@@ -23,7 +23,6 @@ passwordProp;
      this.ds.signup({
        name:this.nameProp, 
        email:this.emailProp,
-      
        mobile:this.mobileProp,
        password:this.passwordProp
       })
@@ -35,11 +34,8 @@ passwordProp;
          }
          else{
            alert("E-mail already Registered");
+          //  alert(JSON.stringify(response.data));
          }
        })
   }
-
-
-  
 }
-

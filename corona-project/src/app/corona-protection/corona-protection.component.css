@@ -8,8 +8,9 @@
 }
 
 img {
-    width: 100%;
+    width: 50%;
     height: fit-content;
+    margin: 0 auto;
   }
   
   .heading{
@@ -67,8 +68,3 @@ img {
   {
     margin: 40px 80px;
   }
-
-/* change from manas */
-    .column:hover {
-        transform: scale(1.1);
-    } 

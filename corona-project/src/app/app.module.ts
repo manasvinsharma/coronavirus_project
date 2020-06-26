@@ -18,6 +18,7 @@ import { IndiaComponent } from './india/india.component';
 import { CoronaHealthComponent } from './corona-health/corona-health.component';
 import { CoronaProtectionComponent } from './corona-protection/corona-protection.component';
 import { HomeComponent } from './home/home.component';               
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,11 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey:'AIzaSyDD9H7gkMV2e7RPnI_sPj6raRy9DtHnjgw'
+    })
+
   ],
   providers: [],
   bootstrap: [AppComponent]

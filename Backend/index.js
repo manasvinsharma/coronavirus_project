@@ -1,13 +1,15 @@
-const express=require('express');
+const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 
- var dbName = "signupdb"
+// var dbName = "myDatabase";
+var dbName = "signupdb";
 
 // var client = new MongoClient( 'mongodb://localhost:27017/corona-project', {useNewUrlParser:true});
-var client = new MongoClient('mongodb+srv://admin:corona19@cluster0-towpt.mongodb.net/dbname?retryWrites=true&w=majority', { useNewUrlParser: true });
+// var client = new MongoClient('mongodb+srv://user_1:manasvin@mydatabase-tgcov.mongodb.net/dbName?retryWrites=true&w=majority', { useNewUrlParser: true },);
+var client = new MongoClient('mongodb+srv://admin:corona19@cluster0-towpt.mongodb.net/dbname?retryWrites=true&w=majority', { useNewUrlParser: true },);
 
 
 
@@ -56,17 +58,19 @@ app.post('/sign-in', bodyParser.json(), (req, res) => {
             res.send({ status: "failed", data: err });
         }
     })
-})
+}
+
+)
 
 
 
 app.post('/sign-up', bodyParser.json(), (req, res) => {
 
-    var collection = connection.db(dbName).collection('users');
+        var collection = connection.db(dbName).collection('user_1');
 
-    collection.find({ email: req.body.email }).toArray((err, docs) => {
+        collection.find({ email: req.body.email }).toArray((err, docs) => {
         if (!err && docs.length > 0) {
-            res.send({ status: "failed", data: "email already Exist" })
+            res.send({ status: "id already exists", data: docs })
         }
         else {
 
@@ -82,11 +86,71 @@ app.post('/sign-up', bodyParser.json(), (req, res) => {
         }
     })
 
+})
 
 
+
+
+// app.post('/corona-tracker', bodyParser.json(), (req, res) => {
+
+//     var collection = connection.db(dbName).collection('user_2');
+
+//     collection.insert(req.body, (err, result) => {
+//         if (!err) {
+//             res.send({ status: "ok", data: "location saved" });
+//         }
+//         else {
+//             res.send({ status: "failed", data: err });
+//         }
+//     })
+// })
+
+
+
+app.post('/corona-tracker', bodyParser.json(), (req, res) => {
+
+    var collection = connection.db(dbName).collection('user_2');
+
+    collection.find({ email: req.body.email }).toArray((err, docs) => {
+    if (!err && docs.length > 0) {
+        res.send({ status: "location already exists", data: docs })
+    }
+    else {
+
+        collection.insert(req.body, (err, result) => {
+            if (!err) {
+                res.send({ status: "ok", data: "location saved" });
+            }
+            else {
+                res.send({ status: "failed", data: err });
+            }
+        })
+
+    }
+})
 
 })
 
 
-app.listen(3000, ()=>{console.log("server is listining on port 3000")});
 
+
+
+
+app.post('/get-locations', bodyParser.json(), (req, res) => {
+
+    var collection = connection.db(dbName).collection('user_2');
+
+    collection.find().toArray((err, docs) => {
+        if (!err) {
+            res.send({ status: "ok", data: docs })
+        }
+        else {
+            res.send({ status: "failed", data: err });
+        }
+    })
+})
+
+
+
+
+app.listen(3000, () => { console.log("server is listining on port 3000") });

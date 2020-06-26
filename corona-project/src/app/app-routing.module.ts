@@ -1,3 +1,4 @@
+import { IndiaComponent } from './india/india.component';
 
 
 
@@ -27,24 +28,18 @@ const routes: Routes = [
     children:[  {path:'worldStats',component:WorldStatsComponent},
                 {path:'continentStats',component:ContinentStatsComponent},
                 {path:'countryStats',component:CountryStatsComponent},
+                {path:'india',component:IndiaComponent},
              ]
   },
-  
-  // {path:'sidebar/continentStats',component:ContinentStatsComponent},
+
   {path:'testYourself',component:TestYourselfComponent, canActivate:[AuthGuard]},
 
   {path: 'login', component:LoginComponent},
-  {path:'signup',component:SignupComponent},      
-
-  {path:'login', component:LoginComponent} ,      
-  {path:'signup',component:SignupComponent},        
+  {path:'signup',component:SignupComponent},             
 
   {path:'coronaProtection',component:CoronaProtectionComponent, canActivate:[AuthGuard]},        
   {path:'coronaHealth',component:CoronaHealthComponent, canActivate:[AuthGuard]},        
-
-
-  {path:'coronaProtection',component:CoronaProtectionComponent},        
-  {path:'coronaHealth',component:CoronaHealthComponent},        
+       
   {path:'home',component:HomeComponent},        
 
 ];
