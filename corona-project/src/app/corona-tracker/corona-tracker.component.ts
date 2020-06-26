@@ -12,13 +12,16 @@ export class CoronaTrackerComponent implements OnInit {
 
   name;
   email;
-  lati;
-  long;
+  current_lati;
+  current_long;
   obj;
   userlist;
   latitude = 28.644800;
   longitude = 77.216721;
+
+
   zoomCtrl = true;
+  locationObject;
 
   constructor(private route: ActivatedRoute, private router: Router, private ds: DataService) { }
 
@@ -27,29 +30,7 @@ export class CoronaTrackerComponent implements OnInit {
     this.email = localStorage.getItem('email');
     this.route.queryParamMap.subscribe((d) => {
       this.name = d.get('name');
-    })
-
-    //making temporary data
-    this.userlist = [
-                      {email:"karnataka",longitude:76.680000	,lattitude:12.120000},
-                      {email:"rajasthan",longitude:74.629997,lattitude:24.879999},
-                      {email:"maharashtra",longitude:73.300003,lattitude:16.994444},
-                      {email:"maharashtra",longitude:72.849998,lattitude:19.155001},
-                    ]
-    // var i=0;                
-    // for (i = 0; i < this.userlist.length; i++) 
-    // {
-    //   var dist = this.distanceCheck(24.879999,74.629997,this.userlist[i].lattitude,this.userlist[i].longitude,"K");
-    //   if(dist<2)
-    //   {
-    //     alert("you have a positive corona patient in your 2 km of radius");
-    //     break;
-    //   }
-    // }
-    // if(i==this.userlist.length)
-    // {
-    //   alert("you are safe as you dont have a positive corona patient nearby you");
-    // }                    
+    })   
   }
 
 
@@ -59,32 +40,19 @@ export class CoronaTrackerComponent implements OnInit {
   getLocation() {
     if (navigator.geolocation) {
       console.log("success");
-       navigator.geolocation.getCurrentPosition((p)=>{this.showposition(p)});
-      
-      // setTimeout((obj2)=>{ alert("Hello");
-      //                       console.log(obj2);
-      //                       this.saveLocation(obj2); 
-      //                     }, 2000,this.obj);                    
-      
-      // setTimeout(this.myFunction, 2000,this.obj,this.saveLocation);  //from stackoverflow                  
+       navigator.geolocation.getCurrentPosition((p)=>{this.showposition(p)});    
     }
     else {
           console.log("error");
         }
   }
 
-  // myFunction(obj2,saveLocation){
-  //    alert("Hello");
-  //   console.log(obj2);
-  //   saveLocation(obj2);                       
-  // }
-
   showposition(position) {
-    var lati = position.coords.latitude;
-    var long = position.coords.longitude;
+    this.current_lati = position.coords.latitude;
+    this.current_long = position.coords.longitude;
     console.log("inside showposition");
-    console.log(lati, long);
-    this.saveLocation( {lattitude:lati,longitude:long});
+    console.log(this.current_lati, this.current_long);
+    this.saveLocation( {lattitude:this.current_lati,longitude:this.current_long,email:this.email});
   }
 
   saveLocation(obj1)
@@ -96,11 +64,20 @@ export class CoronaTrackerComponent implements OnInit {
         if (response.status == "ok") {
           alert('Your location successfuly stored');
         }
+        else if(response.status == "location already exists")
+        {
+          alert('your location is already stored ,thank you')
+        }
         else {
           alert("error in saving location");
         }
       })
+      
   }
+  checking(){
+    this.getAllLocations();
+  }
+
 
   distanceCheck(lat1, lon1, lat2, lon2, unit) {
     if ((lat1 == lat2) && (lon1 == lon2)) {
@@ -122,5 +99,54 @@ export class CoronaTrackerComponent implements OnInit {
       if (unit=="N") { dist = dist * 0.8684 }
       return dist;
     }
+  }
+
+
+  getAllLocations()
+  {
+    this.ds.getLocations()
+      .subscribe((response)=>{
+        if(response.status=="ok")
+        {
+          alert('locations fetched successfully');
+          // console.log(response.data);
+          this.userlist = response.data;
+          this.checkingNearby();
+        }
+        else{
+          alert("locations cant be fetched ");
+         //  alert(JSON.stringify(response.data));
+        }
+      })
+  }
+
+
+  checkingNearby(){
+    var i=0;                
+    for (i = 0; i < this.userlist.length; i++) 
+    {
+      var dist = this.distanceCheck(this.current_lati,this.current_long,this.userlist[i].lattitude,this.userlist[i].longitude,"K");
+      if(dist<2 && this.current_lati != this.userlist[i].lattitude && this.current_long != this.userlist[i].longitude)
+      {
+        var alertDiv = document.getElementsByClassName("alerts")[0];
+        alertDiv.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Alert</strong> Beware you have a corona positive in 2 km of your radius !
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>`
+        break;
+      }
+    }
+    if(i==this.userlist.length)
+    {
+      var alertDiv = document.getElementsByClassName("alerts")[0];
+        alertDiv.innerHTML = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Relax</strong> You dont have a corona positive patient nearby .
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>`
+    }  
   }
 }

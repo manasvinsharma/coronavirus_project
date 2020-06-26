@@ -2,3 +2,20 @@
     width: 1000px;
     height: 500px;
 }
+
+.agm-map-container-inner {
+    margin-left: 385px;
+}
+/* 
+
+.sebm-google-map-container-inner {
+    margin-left: 385px;
+} */
+
+.btns{
+    margin: 0 auto;
+}
+
+button{
+    margin: 25px;
+}

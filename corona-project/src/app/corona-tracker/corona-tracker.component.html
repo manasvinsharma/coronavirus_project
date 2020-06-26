@@ -1,26 +1,43 @@
-<br><br><br>
+<br><br><br><br><br><br>
 
-<button type="button" class="btn btn-dark" (click)="getLocation()">My Location</button>
+<div class="alerts">
+
+</div>
+
+<div class="btns">
+  <button type="button" class="btn btn-dark" (click)="getLocation()">Show my location</button>
+  <button type="button" class="btn btn-dark" (click)="checking()">Check my Nearby</button>
+
+</div>
 
 
-<agm-map [latitude]='latitude' [longitude]='longitude' [zoom]='4'  [zoomControl]='zoomCtrl' > 
+<agm-map [latitude]='latitude' [longitude]='longitude' [zoom]='5'  [zoomControl]='zoomCtrl' > 
   
-    <agm-marker     [latitude]='latitude'
+    <!-- <agm-marker     [latitude]='latitude'
     [longitude]='longitude'  >
    
     <agm-info-window >
-       <h6>Longitude: {{longitude}}</h6>
-       <h6>Latitude: {{latitude}}</h6>
+       <h6>Longitude: {{current_long}}</h6>
+       <h6>Latitude: {{current_lati}}</h6>
        <h6>Email: {{email}}</h6>
       
      </agm-info-window>
    
    
-   </agm-marker>
+   </agm-marker> -->
+
+   <agm-marker    [latitude]='current_lati'
+     [longitude]='current_long'   >
+    
+     <agm-info-window #window>
+        <h6>Longitude: {{current_long}}</h6>
+        <h6>Latitude: {{current_lati}}</h6>
+        <h6>email: {{email}}</h6>
+      </agm-info-window>
+    </agm-marker>
+
 
  <ng-container *ngFor="let u of userlist">
-
-
 
     <agm-marker    [latitude]='u.lattitude'
      [longitude]='u.longitude'>
@@ -35,3 +52,4 @@
     </agm-marker>
   </ng-container>
 </agm-map>
+<br><br><br>
