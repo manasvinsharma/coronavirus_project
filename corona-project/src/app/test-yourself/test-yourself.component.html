@@ -1,5 +1,5 @@
 <br><br><br>
-<br>
+<br> 
 <body> 
 <div>
     <h1>Please give correct answers...</h1>
@@ -9,64 +9,65 @@
     <br>
     <p>Please note that information from these questions will be used for monitoring & management of the current health
         crisis and research in the fight against COVID-19.</p>
+     
+        <div class="questions">
+            <h3>Are you experiencing any of the following symptoms?</h3>
+            <div>
+                <input type="checkbox" name="symptom"  value="1" [disabled]="symptomnoa"  /> Cough<br>
+                <input type="checkbox" name="symptom"  value="2" [disabled]="symptomnoa"  /> Fever<br>
+                <input type="checkbox" name="symptom"  value="3" [disabled]="symptomnoa"  /> Difficulty in Breathing <br>
+                <input type="checkbox" name="symptom"  value="4" [disabled]="symptomnoa"  /> loss of senses of smell and taste<br>
+                <input type="checkbox" name="symptom"  value="5" name="noa" [(ngModel)]=" symptomnoa"  />None of the Above
+                    
+            </div>
 
-    <div class="questions">
-        <h3>Are you experiencing any of the following symptoms?</h3>
-        <div>
-            <input type="checkbox" name="symptom[]" value="1" [disabled]="symptomnoa"/> Cough<br>
-            <input type="checkbox" name="symptom[]" value="1" [disabled]="symptomnoa" /> Fever<br>
-            <input type="checkbox" name="symptom[]" value="1" [disabled]="symptomnoa"/> Difficulty in Breathing <br>
-            <input type="checkbox" name="symptom[]" value="1" [disabled]="symptomnoa" /> loss of senses of smell and taste<br>
-            <input type="checkbox" name="symptom[]" value="1" name="noa" [(ngModel)]="symptomnoa" />None of the Above
-        </div>
-
-        <h3>Have you ever had any of the following:</h3>
-        <div>
-            <input type="checkbox" name="desease[]" value="1" [disabled]="deseasenoa"/>Diabetes <br>
-            <input type="checkbox" name="desease[]" value="1" [disabled]="deseasenoa"/>Hypertension<br>
-            <input type="checkbox" name="desease[]" value="1" [disabled]="deseasenoa"/>Lung disease<br>
-            <input type="checkbox" name="desease[]" value="1" [disabled]="deseasenoa"/>Heart disease<br>
-            <input type="checkbox" name="desease[]" value="1" [disabled]="deseasenoa"/>Kidney Disorder<br>
-            <input type="checkbox" name="desease[]" value="1" name="noa" [(ngModel)]="deseasenoa" />None of the Above
-        </div>
-        <h3>Have you traveled anywhere internationally in the last 28-45 days?</h3>
-        <div>
-            <input type="checkbox"  [disabled]="traveledchk" >Yes<br>
-            <input type="checkbox" name="traveledchk" [(ngModel)]="traveledchk" >No<br>
-            
-        </div>
-        <div class="sub" *ngIf="traveledchk">
-                <h3>Which of the following apply to you?</h3>
-                <div>
-                    <input type="checkbox" name="applychk" [disabled]="applychk2" [(ngModel)]="applychk">I have recently interacted or lived with someone who has tested positive for
-                    COVID-19<br>
-                    <input type="checkbox" name="applychk2" [disabled]="applychk" [(ngModel)]="applychk2">I am a healthcare worker and I examined a COVID-19 confirmed case without protective
-                    gear<br>
-                    <input type="checkbox" [disabled]="applychk2" [disabled]="applychk" >None of the Above
+            <h3>Have you ever had any of the following:</h3>
+            <div>
+                <input type="checkbox" name="desease[]" value="1"  [disabled]="deseasenoa"/>Diabetes <br>
+                <input type="checkbox" name="desease[]" value="1"  [disabled]="deseasenoa"/>Hypertension<br>
+                <input type="checkbox" name="desease[]" value="1"  [disabled]="deseasenoa"/>Lung disease<br>
+                <input type="checkbox" name="desease[]" value="1"  [disabled]="deseasenoa"/>Heart disease<br>
+                <input type="checkbox" name="desease[]" value="1"  [disabled]="deseasenoa"/>Kidney Disorder<br>
+                <input type="checkbox" name="desease[]" value="1" name="noa" [(ngModel)]=" deseasenoa" />None of the Above
+                     
+            </div>
+            <h3>Have you traveled anywhere internationally in the last 28-45 days?</h3>
+            <div>
+                <input type="checkbox" name="traveledchk" [disabled]="traveledchk" >Yes<br>
+                <input type="checkbox" name="traveledchk" [(ngModel)]="traveledchk" >No<br>
+                 
+            </div>
+                <div class="sub" *ngIf="traveledchk">
+                    <h3>Which of the following apply to you?</h3>
+                    <div>
+                        <input type="checkbox" name="applychk" [disabled]="applychk2" [(ngModel)]="applychk">I have recently interacted or lived with someone who has tested positive for
+                        COVID-19<br>
+                        <input type="checkbox" name="applychk2" [disabled]="applychk" [(ngModel)]="applychk2">I am a healthcare worker and I examined a COVID-19 confirmed case without protective
+                        gear<br>
+                        <input type="checkbox" [disabled]="applychk2" [disabled]="applychk" >None of the Above
+                    </div>
                 </div>
-        </div>
-        <div class="sub-sub" *ngIf="applychk">
-            <h3>When did this interaction take place?</h3>
-            <div>
-                <input type="checkbox">Less than 5 days ago <br>
-                <input type="checkbox">Greater than 5 days ago <br>
-                <input type="checkbox">Greater than 14 days ago
+                <div class="sub-sub" *ngIf="applychk">
+                    <h3>When did this interaction take place?</h3>
+                    <div>
+                        <input type="checkbox">Less than 5 days ago <br>
+                        <input type="checkbox">Greater than 5 days ago <br>
+                        <input type="checkbox">Greater than 14 days ago
 
-            </div>
-        </div>
-        <div class="sub-sub" *ngIf="applychk2">
-            <h3>When did this interaction take place?</h3>
-            <div>
-                <input type="checkbox">Less than 5 days ago <br>
-                <input type="checkbox">Greater than 5 days ago <br>
-                <input type="checkbox">Greater than 14 days ago
-
-            </div>
-        </div>
-    </div>
-
-    <br>
-    <button type="submit" (click)="test()">Test</button>
+                    </div>
+                </div>
+                <div class="sub-sub" *ngIf="applychk2">
+                    <h3>When did this interaction take place?</h3>
+                    <div>
+                        <input type="checkbox">Less than 5 days ago <br>
+                        <input type="checkbox">Greater than 5 days ago <br>
+                        <input type="checkbox">Greater than 14 days ago
+                    </div>
+                </div>
+        </div><br> 
+        <button type="submit"  (click)="test()">Test</button>
+         
+     
 
 </div>
 </body>

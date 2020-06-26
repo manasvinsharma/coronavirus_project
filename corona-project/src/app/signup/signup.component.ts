@@ -25,7 +25,7 @@ passwordProp;
        email:this.emailProp,
       
        mobile:this.mobileProp,
-       password:this.passwordProp,
+       password:this.passwordProp
       })
        .subscribe((response)=>{
          if(response.status=="ok")

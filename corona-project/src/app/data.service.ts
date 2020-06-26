@@ -32,5 +32,9 @@ export class DataService {
   return this.http.post('http://localhost:3000/sign-in', d);
  }
 
+ coronatest(d):any{
+  return this.http.post('http://localhost:3000/corona-test', d);
+
+ }
   
 }
