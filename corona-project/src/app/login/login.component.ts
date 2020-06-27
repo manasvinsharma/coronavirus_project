@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
     if(localStorage.getItem('email')){
+      alert("You are already logged in");
       this.router.navigate(['/']);
     }  
   }

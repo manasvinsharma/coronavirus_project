@@ -39,7 +39,7 @@ export class CoronaTrackerComponent implements OnInit {
 
   getLocation() {
     if (navigator.geolocation) {
-      console.log("success");
+      // console.log("success");
        navigator.geolocation.getCurrentPosition((p)=>{this.showposition(p)});    
     }
     else {
@@ -50,15 +50,17 @@ export class CoronaTrackerComponent implements OnInit {
   showposition(position) {
     this.current_lati = position.coords.latitude;
     this.current_long = position.coords.longitude;
-    console.log("inside showposition");
-    console.log(this.current_lati, this.current_long);
+    // console.log("inside showposition");
+    // console.log(this.current_lati, this.current_long);
+    
+    if(localStorage.getItem('checked')=="true")
     this.saveLocation( {lattitude:this.current_lati,longitude:this.current_long,email:this.email});
   }
 
   saveLocation(obj1)
   {
-    console.log("inside saveLocation");
-    console.log(obj1);
+    // console.log("inside saveLocation");
+    // console.log(obj1);
     this.ds.storeLocation(obj1)
       .subscribe((response) => {
         if (response.status == "ok") {

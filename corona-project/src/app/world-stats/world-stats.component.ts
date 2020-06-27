@@ -83,8 +83,8 @@ export class WorldStatsComponent implements OnInit {
           ],
           //backgroundColor:'green',
           backgroundColor: [
-            'black',
             'red',
+            'black',
             'green'
           ],
           borderWidth: 1,
@@ -165,7 +165,7 @@ showTimeline(obj2) {
       data: arr2,
       lineTension: 0,
       fill: false,
-      borderColor: 'black'
+      borderColor: 'red'
     };
 
     var dataSecond = {
@@ -173,7 +173,7 @@ showTimeline(obj2) {
       data: arr3,
       lineTension: 0,
       fill: false,
-      borderColor: 'red'
+      borderColor: 'black'
     };
 
     var dataThird = {
