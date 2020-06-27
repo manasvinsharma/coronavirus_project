@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TestYourselfComponent } from './test-yourself/test-yourself.component';
 
 @Component({
   selector: 'app-root',
@@ -16,9 +17,12 @@ export class AppComponent {
   
     localStorage.removeItem("name");
     this.router.navigate(['/login']);
+
+   
   
   
   
   }
+  
 
 }

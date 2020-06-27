@@ -142,6 +142,9 @@ export class  TestYourselfComponent {
   ];
 
   ngOnInit(): void {
+    
+    alert("If you press TEST button without answering any question, we'll assume that you are SAFE...Thank You!!")
+    
     this.fetchSelectedItems()   
   }
 
@@ -161,7 +164,7 @@ export class  TestYourselfComponent {
     });
     this.selectedItemsList21 = this.checkboxesDataList21.filter((value, index) => {
       return value.isChecked
-    });
+    }); 
     this.selectedItemsList30 = this.checkboxesDataList30.filter((value, index) => {
       return value.isChecked
     });
@@ -180,6 +183,7 @@ export class  TestYourselfComponent {
    
   test(){
     var report=false;
+   
     if(this.selectedItemsList.length>=1 || this.selectedItemsList2.length>=1 || this.selectedItemsList40.length>=1)
       {
         alert("Thank You for taking this assessment.")
