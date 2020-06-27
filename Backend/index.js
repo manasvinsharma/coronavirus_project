@@ -8,7 +8,9 @@ const ObjectId = require('mongodb').ObjectId;
 var dbName = "signupdb";
 
 // var client = new MongoClient( 'mongodb://localhost:27017/corona-project', {useNewUrlParser:true});
+
 // var client = new MongoClient('mongodb+srv://user_1:manasvin@mydatabase-tgcov.mongodb.net/dbName?retryWrites=true&w=majority', { useNewUrlParser: true },);
+
 var client = new MongoClient('mongodb+srv://admin:corona19@cluster0-towpt.mongodb.net/dbname?retryWrites=true&w=majority', { useNewUrlParser: true },);
 
 
@@ -66,7 +68,7 @@ app.post('/sign-in', bodyParser.json(), (req, res) => {
 
 app.post('/sign-up', bodyParser.json(), (req, res) => {
 
-        var collection = connection.db(dbName).collection('user_1');
+        var collection = connection.db(dbName).collection('users');
 
         collection.find({ email: req.body.email }).toArray((err, docs) => {
         if (!err && docs.length > 0) {

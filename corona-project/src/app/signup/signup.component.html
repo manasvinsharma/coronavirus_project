@@ -1,24 +1,46 @@
 <br><br><br>
-<form #f="ngForm">
-    <div class="form-group"  >
-      <label for="name">Name:</label>
-      <input #nameref="ngModel"  [(ngModel)]="nameProp" name="name"   type="text" class="form-control" placeholder="Enter Name" id="email">
-    </div>
 
-    <div class="form-group"  >
+<body>
+  
+
+<div id="wrapper">
+  <div class="form-container">
+    <span class="form-heading">SIGN UP</span>
+
+    <form #f="ngForm">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <label for="name">Name:</label>
+        <input #nameref="ngModel" [(ngModel)]="nameProp" name="name" type="text" placeholder="Enter Name" id="email">
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
         <label for="email">Email address:</label>
-        <input #emailref="ngModel"  [(ngModel)]="emailProp" name="email"   type="email" class="form-control" placeholder="Enter email" id="email">
+        <input #emailref="ngModel" [(ngModel)]="emailProp" name="email" type="email" placeholder="Enter email"
+          id="email">
       </div>
 
-      <div class="form-group"  >
+      <div class="input-group">
+        <i class="fas fa-mobile"></i>
         <label for="mobileno">Mobile No.:</label>
-        <input #mobileref="ngModel"  [(ngModel)]="mobileProp" name="mobile"   type="text" class="form-control" placeholder="Enter Mobile No." id="email">
+        <input #mobileref="ngModel" [(ngModel)]="mobileProp" name="mobile" type="text" placeholder="Enter Mobile No."
+          id="email">
       </div>
 
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input #passref="ngModel"  [(ngModel)]="passwordProp" name="password"  type="password" class="form-control" placeholder="Enter password" id="pwd">
-    </div>
-    
-    <button type="submit" class="btn btn-primary"  (click)="signUp()"  >Submit</button>
-  </form>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <label for="pwd">Password:</label>
+        <input #passref="ngModel" [(ngModel)]="passwordProp" name="password" type="password"
+          placeholder="Enter password" id="pwd">
+      </div>
+      <div class="input-group">
+        
+        <button type="submit" class="btn btn-primary" (click)="signUp()">
+          <i class="fab fa-telegram-plane"></i>Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>

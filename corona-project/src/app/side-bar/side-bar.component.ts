@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -8,9 +9,10 @@ declare var document:any;
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-  constructor() { }
+  constructor(private router:Router) {  }
 
   ngOnInit(): void {
+    this.router.navigate(['/sidebar/worldStats']);
   }
 
   openNav() {

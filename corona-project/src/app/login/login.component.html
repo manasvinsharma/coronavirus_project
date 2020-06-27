@@ -1,15 +1,30 @@
 <br><br><br><br>
-<form #f="ngForm" class="myForm">
-  <div class="form-group">
-    <label for="email">Email address:</label>
-    <input #emailref="ngModel" [(ngModel)]="emailProp" name="email" type="email" class="form-control"
-      placeholder="Enter email" id="email">
-  </div>
-  <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input #passref="ngModel" [(ngModel)]="passwordProp" name="password" type="password" class="form-control"
-      placeholder="Enter password" id="pwd">
-  </div>
 
-  <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
-</form>
+
+
+<body>
+  <div id="wrapper">
+    <div class="form-container">
+      <span class="form-heading">Login Here</span>
+      <form #f="ngForm">
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <label for="email">Email address:</label>
+          <input #emailref="ngModel" [(ngModel)]="emailProp" name="email" type="email" placeholder="Enter email"
+            id="email">
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <label for="pwd">Password:</label>
+          <input #passref="ngModel" [(ngModel)]="passwordProp" name="password" type="password"
+            placeholder="Enter password" id="pwd">
+        </div>
+        <div class="input-group">
+        <button type="submit" class="btn btn-primary" (click)="login()">
+          <i class="fab fa-telegram-plane"></i>Login</button>
+      </div>    
+      </form>
+
+    </div>
+  </div>
+</body>

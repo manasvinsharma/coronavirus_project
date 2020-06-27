@@ -18,7 +18,7 @@ import { IndiaComponent } from './india/india.component';
 import { CoronaHealthComponent } from './corona-health/corona-health.component';
 import { CoronaProtectionComponent } from './corona-protection/corona-protection.component';
 import { HomeComponent } from './home/home.component';               
-import { AgmCoreModule } from '@agm/core';
+import {AgmCoreModule} from '@agm/core';
 
 @NgModule({
   declarations: [
