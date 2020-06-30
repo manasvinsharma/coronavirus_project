@@ -1,1 +1,15 @@
-Chirag Goyal
+INSTRUCTION - 
+
+1 sign up and then you will be navigated to login page where you can login.
+
+2 after login some questions will be asked to you which will help us to know 
+	whether you are covid-19 positive or not. 
+
+3 after submitting the answers you will be navigated to corona tracker 
+	component
+
+4 tracker needs to get your location so kindly allow the location when asked.    
+  Also you can check your near by areas and get to know if there is any covid-19
+  positive patient or not.	  		
+
+5 you can use our components - corona stats,about,corona tracker after signing in only.
