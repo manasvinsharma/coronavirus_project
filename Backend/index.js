@@ -9,9 +9,9 @@ var dbName = "signupdb";
 
 // var client = new MongoClient( 'mongodb://localhost:27017/corona-project', {useNewUrlParser:true});
 
-// var client = new MongoClient('mongodb+srv://user_1:manasvin@mydatabase-tgcov.mongodb.net/dbName?retryWrites=true&w=majority', { useNewUrlParser: true },);
+// var client = new MongoClient(ADD_YOUR_MONGODB_STRING, { useNewUrlParser: true },);
 
-var client = new MongoClient('mongodb+srv://admin:corona19@cluster0-towpt.mongodb.net/dbname?retryWrites=true&w=majority', { useNewUrlParser: true },);
+var client = new MongoClient(ADD_YOUR_MONGODB_STRING, { useNewUrlParser: true },);
 
 
 
