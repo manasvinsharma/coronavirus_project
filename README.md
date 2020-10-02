@@ -2,19 +2,21 @@
 
 FOLLOW THESE INSTRUCTIONS-
 
-1 install node mudules
-  
-2 to run frontend->
+1 install node-modules
 
-  2.1 go to corona-project folder
+2 Add your mongo db string to Backend->index.js file
 
-  2.2 run this command  ng serve -o
+3 to run frontend->
+
+  3.1 go to corona-project folder
+
+  3.2 run this command  ng serve -o
     
-3 to run backend/database->
+4 to run backend/database->
 
-  3.1 go to backend folder
+  4.1 go to backend folder
 
-  3.2 run this command  node index.js
+  4.2 run this command  node index.js
 
 ScreenShots of application
 ![Picture1](https://user-images.githubusercontent.com/55654162/93712950-9b64ab00-fb76-11ea-9a2c-d9c1df3e7398.png)
