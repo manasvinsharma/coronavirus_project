@@ -1,4 +1,21 @@
 # coronavirus_project
+
+FOLLOW THESE INSTRUCTIONS-
+
+1 install node mudules
+  
+2 to run frontend->
+
+  2.1 go to corona-project folder
+
+  2.2 run this command  ng serve -o
+    
+3 to run backend/database->
+
+  3.1 go to backend folder
+
+  3.2 run this command  node index.js
+
 ScreenShots of application
 ![Picture1](https://user-images.githubusercontent.com/55654162/93712950-9b64ab00-fb76-11ea-9a2c-d9c1df3e7398.png)
 ![Picture2](https://user-images.githubusercontent.com/55654162/93712994-da92fc00-fb76-11ea-91a5-e3fbd6e8aa76.png)
