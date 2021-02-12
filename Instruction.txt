@@ -1,17 +1,18 @@
-INSTRUCTION - 
+INSTRUCTIONS - 
 
-1 sign up and then you will be navigated to login page where you can login.
+1. Sign up and then you will be navigated to login page where you can login.
 
-2 after login some questions will be asked to you which will help us to know 
+2. After login some questions will be asked to you which will help us to know 
 	whether you are covid-19 positive or not. 
 
-3 after submitting the answers you will be navigated to corona tracker 
+3. After submitting the answers you will be navigated to corona tracker 
 	component
 
-4 tracker needs to get your location so kindly allow the location when asked.    
+4. Tracker needs to get your location so kindly allow the location when asked.    
   Also you can check your near by areas and get to know if there is any covid-19
   positive patient or not.	  		
 
+<<<<<<< HEAD
 5 you can use our components - corona stats,about,corona tracker after signing in only.
 
 
@@ -31,3 +32,6 @@ If you want to clone and run our project then-
   folder
 
 6 Then go to corona-project named folder and run command "ng serve -o".	 
+=======
+5. You can use our components - corona stats,about,corona tracker after signing in only.
+>>>>>>> 545c1fa304b04d3cb05f229556722f4faa757e11

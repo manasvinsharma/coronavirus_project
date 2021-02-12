@@ -9,12 +9,18 @@ var dbName = 'signupdb';
 
 // var client = new MongoClient( 'mongodb://localhost:27017/corona-project', {useNewUrlParser:true});
 
-// var client = new MongoClient('mongodb+srv://user_1:manasvin@mydatabase-tgcov.mongodb.net/dbName?retryWrites=true&w=majority', { useNewUrlParser: true },);
+// var client = new MongoClient(ADD_YOUR_MONGODB_STRING, { useNewUrlParser: true },);
 
+<<<<<<< HEAD
 var client = new MongoClient(
   'mongodb+srv://admin:corona19@cluster0-towpt.mongodb.net/dbname?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
+=======
+var client = new MongoClient(ADD_YOUR_MONGODB_STRING, { useNewUrlParser: true },);
+
+
+>>>>>>> 545c1fa304b04d3cb05f229556722f4faa757e11
 
 var connection;
 client.connect((err, con) => {
@@ -105,6 +111,10 @@ app.post('/get-locations', bodyParser.json(), (req, res) => {
   });
 });
 
+<<<<<<< HEAD
 app.listen(8080, () => {
   console.log('server is listining on port 3000');
 });
+=======
+app.listen(3000, () => { console.log("server is listining on port 3000") });
+>>>>>>> 545c1fa304b04d3cb05f229556722f4faa757e11
