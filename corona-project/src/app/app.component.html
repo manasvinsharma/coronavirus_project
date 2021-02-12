@@ -1,89 +1,151 @@
 <div id="main">
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/home">HOME</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-40">
         <li class="nav-item active mx-20">
-          <a class="nav-link" routerLink="/coronaTracker" routerLinkActive="whenActive">Corona Tracker <span class="sr-only">(current)</span></a>
+          <a
+            class="nav-link"
+            routerLink="/coronaTracker"
+            routerLinkActive="whenActive"
+            >Corona Tracker <span class="sr-only">(current)</span></a
+          >
         </li>
         <div class="dropdown">
-          <a class="nav-link dropdown-toggle" routerLink="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLinkActive="whenActive" style="color: white;">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLink="#"
+            id="dropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            routerLinkActive="whenActive"
+            style="color: white"
+          >
             About
           </a>
-        
+
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" routerLink="/coronaProtection">Corona Protection</a>
-            <a class="dropdown-item" routerLink="/coronaHealth">Corona Health</a>
+            <a class="dropdown-item" routerLink="/coronaProtection"
+              >Corona Protection</a
+            >
+            <a class="dropdown-item" routerLink="/coronaHealth"
+              >Corona Health</a
+            >
           </div>
         </div>
 
         <li class="nav-item active mx-20">
-          <a class="nav-link" routerLink="/sidebar" routerLinkActive="whenActive">Corona Stats <span class="sr-only">(current)</span></a>
+          <a
+            class="nav-link"
+            routerLink="/sidebar"
+            routerLinkActive="whenActive"
+            >Corona Stats <span class="sr-only">(current)</span></a
+          >
         </li>
 
         <!-- <li class="nav-item active mx-20">
           <a class="nav-link" routerLink="/testYourself" routerLinkActive="whenActive" >Test Yourself<span class="sr-only">(current)</span></a>
         </li> -->
       </ul>
-      <form class="form-inline my-2 my-lg-0" style="margin-left: 250px;">
-        <button  routerLink='/signup' class="btn btn-outline-danger my-2 mx-2 my-sm-0" >Sign Up</button>
+      <form class="form-inline my-2 my-lg-0" style="margin-left: 250px">
+        <button
+          routerLink="/signup"
+          class="btn btn-outline-danger my-2 mx-2 my-sm-0"
+        >
+          Sign Up
+        </button>
         <!-- *ngIf="loginButton" childEvent="loginButton=$event" -->
-        <button  routerLink='/login' class="btn btn-outline-danger my-2 mx-2 my-sm-0" >Login</button>
+        <button
+          routerLink="/login"
+          class="btn btn-outline-danger my-2 mx-2 my-sm-0"
+        >
+          Login
+        </button>
         <!-- *ngIf="loginButton" childEvent="loginButton=$event" -->
-        <button   (click)="logout()" class="btn btn-outline-danger my-2 mx-2 my-sm-0">LogOut</button>
+        <!-- <button   (click)="logout()" class="btn btn-outline-danger my-2 mx-2 my-sm-0">LogOut</button> -->
         <!-- *ngIf="logoutButton" -->
       </form>
     </div>
   </nav>
-</div> 
+</div>
 
-
-<router-outlet></router-outlet> 
-<br><br>
-<hr>
-
+<router-outlet></router-outlet>
+<br /><br />
+<hr />
 
 <footer class="text-gray-700 body-font">
-  <div class="inside-footer container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col">
-    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+  <div
+    class="inside-footer container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col"
+  >
+    <div
+      class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10"
+    >
+      <a
+        class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+          ></path>
         </svg>
-        <span class="ml-3 text-xl" style="color: white; text-align: left;">GO CORONA</span>
+        <span class="ml-3 text-xl" style="color: white; text-align: left"
+          >GO CORONA</span
+        >
       </a>
-      <p class="mt-2 text-sm text-gray-500" style="color: white; text-align: left;">An initiative towards this dangerous pandemic</p>
+      <p
+        class="mt-2 text-sm text-gray-500"
+        style="color: white; text-align: left"
+      >
+        An initiative towards this dangerous pandemic
+      </p>
     </div>
-    <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4" style="width: 500px;">
-        <h3 class=" mb-3" style="color: white;" style="text-align: left;">CONTACT US</h3>
+    <div
+      class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first"
+    >
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4" style="width: 500px">
+        <h3 class="mb-3" style="color: white" style="text-align: left">
+          CONTACT US
+        </h3>
         <nav class="list-none mb-10">
-          <div style="text-align: left;">
-           <h5> MOB NO - 9988776655 </h5> 
-           <h5> MAIL -  abc@gmail.com </h5>
-          <h5>LINKEDIN - XYZXYZ</h5>
+          <div style="text-align: left">
+            <h5>MOB NO - 8529663681</h5>
+            <h5>MAIL - abc@gmail.com</h5>
+            <h5>LINKEDIN - abc@gmail.com</h5>
           </div>
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 class=" mb-3" style="color: white;" style="text-align: left;">MEMBERS</h3>
+        <h3 class="mb-3" style="color: white" style="text-align: left">
+          MEMBERS -
+        </h3>
         <nav class="list-none mb-10">
-          <div style="text-align: left;">
-           <h5> MANASVIN</h5> 
-           <h5> KAVITA  </h5>
-          <h5> CHIRAG </h5>
-          <h5> ANANYA </h5>
-          <h5> CHAVVI</h5>
+          <div style="text-align: left">
+            <h4>MANASVIN</h4>
           </div>
         </nav>
       </div>
-      
     </div>
   </div>
-  
 </footer>

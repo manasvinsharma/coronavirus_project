@@ -13,3 +13,21 @@ INSTRUCTION -
   positive patient or not.	  		
 
 5 you can use our components - corona stats,about,corona tracker after signing in only.
+
+
+
+If you want to clone and run our project then-
+
+1 First of all make sure you have a stable internet connection.
+
+2 Clone this repo to your local repo.
+
+3 Make sure you have downloaded and installed Node.js(node-modules),Angular 9,Mongo db,   
+  express.js,mongoose,npm.
+
+4 Then open this folder in any code editor(probably vscode).
+
+5 Then run index.js file using command "node index.js" present in backend
+  folder
+
+6 Then go to corona-project named folder and run command "ng serve -o".	 
