@@ -16,7 +16,7 @@ FOLLOW THESE INSTRUCTIONS-
 
   4.1 go to backend folder
 
-  4.2 run this command  node index.js
+  4.2 run this command  npm start
 
 ScreenShots of application
 ![Picture1](https://user-images.githubusercontent.com/55654162/93712950-9b64ab00-fb76-11ea-9a2c-d9c1df3e7398.png)
