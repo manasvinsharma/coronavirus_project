@@ -32,19 +32,19 @@ export class DataService {
   }
 
   signup(d): any {
-    return this.http.post('sign-up', d);
+    return this.http.post('http://13.126.150.187:8080/sign-up', d);
   }
 
   signin(d): any {
-    return this.http.post('sign-in', d);
+    return this.http.post('http://13.126.150.187:8080/sign-in', d);
   }
 
   storeLocation(d): any {
-    return this.http.post('corona-tracker', d);
+    return this.http.post('http://13.126.150.187:8080/corona-tracker', d);
   }
 
   getLocations(): any {
-    return this.http.post('get-locations', '');
+    return this.http.post('http://13.126.150.187:8080/get-locations', '');
   }
 }
 
