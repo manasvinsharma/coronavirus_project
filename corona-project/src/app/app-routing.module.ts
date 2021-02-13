@@ -22,11 +22,15 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
 
-  {path:'',component:HomeComponent},
+  {
+    path: '',
+    component: SideBarComponent,
+    children: [{ path: 'worldStats', component: WorldStatsComponent }],
+  },
   {path:'coronaNews',component:CoronaNewsComponent, canActivate:[AuthGuard]},
   {path:'coronaTracker',component:CoronaTrackerComponent, canActivate:[AuthGuard]},
   { path:'sidebar',
-    component:SideBarComponent, canActivate:[AuthGuard],
+    component:SideBarComponent,
     children:[  {path:'worldStats',component:WorldStatsComponent},
                 {path:'continentStats',component:ContinentStatsComponent},
                 {path:'countryStats',component:CountryStatsComponent},
@@ -39,8 +43,8 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path:'signup',component:SignupComponent},             
 
-  {path:'coronaProtection',component:CoronaProtectionComponent, canActivate:[AuthGuard]},        
-  {path:'coronaHealth',component:CoronaHealthComponent, canActivate:[AuthGuard]},        
+  {path:'coronaProtection',component:CoronaProtectionComponent},        
+  {path:'coronaHealth',component:CoronaHealthComponent},        
        
   {path:'home',component:HomeComponent},        
 
